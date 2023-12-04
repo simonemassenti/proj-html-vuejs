@@ -1,0 +1,23 @@
+@use './partials/_variables' as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.title {
+    font-family: serif;
+
+    span {
+        font-family: inherit;
+        color: $main_color;
+    }
+}
+
+.subtitle{
+    margin-top: 1rem;
+    color: $gray_text;
+    font-size: .9rem;
+}

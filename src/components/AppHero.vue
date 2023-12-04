@@ -14,8 +14,8 @@ export default {
         </div>
         <div class="internal-hero">
             <div>
-                <h1>Our Team<span>.</span></h1>
-                <p>
+                <h1 class="title">Our Team<span>.</span></h1>
+                <p class="subtitle">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse pariatur quidem, cupiditate omnis.
                 </p>
                 <button class="btn-white">READ MORE <span>| &RightArrow;</span></button>
@@ -29,7 +29,8 @@ export default {
 </template>
 
 <style scoped lang="scss">
-@import '../assets/style/partials/variables';
+@use '../style/general.scss' as *;
+@use '../style/partials/variables' as *;
 
 .hero-wrap {
     background-image: url("../assets/img/img/rev-slider-main-home-img-03.jpg");
@@ -43,19 +44,8 @@ export default {
         margin: 0 auto;
         div {
             width: 40%;
-            h1 {
-                font-family: serif;
+            .title {
                 font-size: 4rem;
-                span {
-                    font-family: inherit;
-                    color: $main_color;
-                }
-            }
-
-            p{
-                margin-top: 1rem;
-                color: $gray_text;
-                font-size: .9rem;
             }
 
             button {
@@ -68,6 +58,7 @@ export default {
                 font-weight: bold;
                 span {
                     font-size: 1.2rem;
+                    font-weight: 100;
                 }
                 
 

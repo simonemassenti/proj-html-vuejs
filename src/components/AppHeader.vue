@@ -59,7 +59,7 @@ header {
     position: fixed;
     left: 50%;
     transform: translate(-50%);
-
+    z-index: 999;
     img {
         width: 8.5rem;
         align-self: center;
