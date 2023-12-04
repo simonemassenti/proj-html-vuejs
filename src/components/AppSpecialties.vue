@@ -58,10 +58,9 @@ export default {
 .container {
     width: 90%;
     background-color: white;
-    position: absolute;
+    position: relative;
     left: 50%;
-    top: 90%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -10%);
     padding: 5rem;
 
     .title {
@@ -75,13 +74,10 @@ export default {
 
 
     hr {
-        margin-top: 1rem;
-        width: 5%;
-        display: block;
-        border: 1px solid $main_color;
         position: relative;
         left: 50%;
         transform: translateX(-50%);
+        width: 5%;
     }
 
     .row {
@@ -104,7 +100,7 @@ export default {
 
             p{
                 font-size: .9rem;
-                color: $gray_text;
+                color: $gray_text; 
             }
         }
     }

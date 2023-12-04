@@ -21,3 +21,9 @@
     color: $gray_text;
     font-size: .9rem;
 }
+
+hr {
+    margin-top: 1rem;
+    display: block;
+    border: 1px solid $main_color;
+}
