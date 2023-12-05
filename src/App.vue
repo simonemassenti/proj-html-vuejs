@@ -2,15 +2,17 @@
 import AppHeader from './components/AppHeader.vue';
 import AppHero from './components/AppHero.vue';
 import AppSpecialties from './components/AppSpecialties.vue';
+import EventsSection from './components/EventsSection.vue';
 import FounderSection from './components/FounderSection.vue';
 
 export default {
     components: {
-        AppHeader,
-        AppHero,
-        AppSpecialties,
-        FounderSection
-    }
+    AppHeader,
+    AppHero,
+    AppSpecialties,
+    FounderSection,
+    EventsSection
+}
 }
 
 </script>
@@ -23,6 +25,8 @@ export default {
         <AppSpecialties />
         <FounderSection />
     </div>
+
+    <EventsSection/>
 </template>
 
 <style lang="scss">

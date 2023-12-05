@@ -1,35 +1,88 @@
 <script>
 export default {
+    data() {
+        return{
+            team: [
+                {
+                    name: "Jason Bickford",
+                    profession: "Founder and Executive Director",
+                    photo: "h1-img-01.jpg",
+                    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt possimus deleniti natus, perferendis...",
+                    signature: "signature_JBickford.png"
+                },
+                {
+                    name: "Yù Wang",
+                    profession: "Project Manager",
+                    photo: "h1-img-02.jpg",
+                    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt possimus deleniti natus, perferendis...",
+                    signature: "signature_YWang.png"
+                },
+                {
+                    name: "Aaron Loeb",
+                    profession: "Director of Solutions",
+                    photo: "h1-img-03.jpg",
+                    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt possimus deleniti natus, perferendis...",
+                    signature: "signature_ALoeb.png"
+                }
+            ],
+            index: 0
+        }
+    },
+    methods: {
+        getImagePath(img) {
+            return new URL(`../assets/img/img/${img}`, import.meta.url).href;
+        },
+        next(){
+            if(this.index < this.team.length - 1) {
+                this.index++;
+            }else{
+                this.index = 0;
+            }
+        },
+        prev(){
+            if(this.index == 0){
+                this.index = this.team.length-1;
+            }else{
+                this.index--;
+            }
+        }
+    }
 
 }
 </script>
 
 <template>
     <div class="container">
-        <img src="../assets/img/img/h1-blog-img-04.jpg" alt="">
+        <img :src="getImagePath(team[index].photo)" alt="">
         <div class="founder-card">
-            <h2 class="title">Jason Bickford</h2>
+            <h2 class="title">{{ team[index].name }}</h2>
             <p class="subtitle">
-                <small>Founder and Executive Director</small>
+                <small>{{ team[index].profession }}</small>
             </p>
             <hr>
 
             <p class="description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt possimus deleniti natus, perferendis aliquam tenetur sunt...
+                {{ team[index].description }}
             </p>
+            
+            <div class="social">
+                <i class="fa-brands fa-linkedin-in"></i>
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-twitter"></i>
+            </div>
 
             <div class="signature">
-                <img src="../assets/img/img/signature.png" alt="">
+                <img :src="getImagePath(team[index].signature)" alt="">
             </div>
         </div>
 
-        <div class="square-arrow left">
+        <button @click="prev()" class="square-arrow left">
             &LeftArrow;
-        </div>
+        </button>
 
-        <div class="square-arrow right">
+        <button @click="next()" class="square-arrow right">
             &RightArrow;
-        </div>
+        </button>
 
         <img class="decoration" src="../assets/img/svg/svg-4.svg" alt="">
     </div>
@@ -73,15 +126,28 @@ export default {
 
         p.description {
             font-size: .8rem;
-            margin: .5rem 0;
+            margin-top: .5rem;
             line-height: 1.3rem;
             color: $gray_text;
         }
 
+        .social{
+            .fa-brands{
+                margin-right: .5rem;
+                font-size: .6rem;
+                width: 1.4rem;
+                text-align: center;
+                padding: .4rem;
+                background-color: $main_color;
+                border-radius: 50%;
+                color: white;
+            }
+        }
+
         .signature {
             text-align: right;
-            margin-top: .5rem;
-
+            position: relative;
+            top: -1rem;
             img {
                 width: 30%;
             }
@@ -106,6 +172,7 @@ export default {
         position: absolute;
         bottom: 0;
         color: white;
+        border: 0;
         &.left{
             left: 0;
         }
