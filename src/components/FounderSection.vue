@@ -124,13 +124,6 @@ export default {
             margin-top: .5rem;
         }
 
-        p.description {
-            font-size: .8rem;
-            margin-top: .5rem;
-            line-height: 1.3rem;
-            color: $gray_text;
-        }
-
         .social{
             .fa-brands{
                 margin-right: .5rem;

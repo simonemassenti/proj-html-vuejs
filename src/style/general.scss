@@ -27,3 +27,17 @@ hr {
     display: block;
     border: 1px solid $main_color;
 }
+
+.description {
+    font-size: .8rem;
+    margin-top: .5rem;
+    line-height: 1.3rem;
+    color: $gray_text;
+}
+
+.btn-rm {
+    border: 0;
+    background-color: white;
+    font-weight: bold;
+    font-size: .6rem;
+}

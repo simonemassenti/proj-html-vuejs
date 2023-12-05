@@ -11,7 +11,7 @@ export default {
                     location: "Cambridge, MA 02138, USA",
                     info: {
                         text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius illum accusamus incidunt voluptas ut est qui.",
-                        active: true
+                        active: false
                     }
                 },
                 {
@@ -94,7 +94,7 @@ export default {
                             {{ event.location }}
                         </small>
                     </div>
-                    <button @click="openInfo(event)">
+                    <button @click="openInfo(event)" class="btn-rm">
                         <span v-if="event.info.active">CLOSE</span>
                         <span v-else>READ MORE</span>
                     </button>
@@ -127,7 +127,7 @@ export default {
         .events-title {
             background-color: white;
             padding: 1rem 2rem;
-            box-shadow: 0 5px 10px $border_events;
+            box-shadow: 0 5px 10px $border_gray;
             position: relative;
         }
 
@@ -168,13 +168,6 @@ export default {
                         color: $main_color;
                         margin-right: .5rem;
                     }
-                }
-
-                button {
-                    border: 0;
-                    background-color: white;
-                    font-weight: bold;
-                    font-size: .6rem;
                 }
 
                 .info {

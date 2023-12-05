@@ -4,6 +4,7 @@ import AppHero from './components/AppHero.vue';
 import AppSpecialties from './components/AppSpecialties.vue';
 import EventsSection from './components/EventsSection.vue';
 import FounderSection from './components/FounderSection.vue';
+import CreativeSection from './components/CreativeSection.vue';
 
 export default {
     components: {
@@ -11,7 +12,8 @@ export default {
     AppHero,
     AppSpecialties,
     FounderSection,
-    EventsSection
+    EventsSection,
+    CreativeSection
 }
 }
 
@@ -26,8 +28,8 @@ export default {
         <FounderSection />
     </div>
 
-    <EventsSection/>
-    <CreativeSectionVue/>
+    <EventsSection />
+    <CreativeSection />
 
 </template>
 
