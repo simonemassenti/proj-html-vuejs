@@ -81,6 +81,10 @@ header {
                 color: inherit;
                 text-decoration: none;
             }
+
+            i{
+                color: black;
+            }
         }
 
     }

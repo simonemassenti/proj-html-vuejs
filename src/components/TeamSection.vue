@@ -156,16 +156,10 @@ export default {
     }
 
     .square-arrow {
-        display: inline;
-        width: 3rem;
-        height: 3rem;
         background-color: $main_color;
-        text-align: center;
-        line-height: 3rem;
+        color: white;
         position: absolute;
         bottom: 0;
-        color: white;
-        border: 0;
         &.left{
             left: 0;
         }

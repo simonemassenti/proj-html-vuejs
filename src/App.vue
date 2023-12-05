@@ -3,17 +3,19 @@ import AppHeader from './components/AppHeader.vue';
 import AppHero from './components/AppHero.vue';
 import AppSpecialties from './components/AppSpecialties.vue';
 import EventsSection from './components/EventsSection.vue';
-import FounderSection from './components/FounderSection.vue';
+import TeamSection from './components/TeamSection.vue';
 import CreativeSection from './components/CreativeSection.vue';
+import AppNews from './components/AppNews.vue';
 
 export default {
     components: {
     AppHeader,
     AppHero,
     AppSpecialties,
-    FounderSection,
+    TeamSection,
     EventsSection,
-    CreativeSection
+    CreativeSection,
+    AppNews
 }
 }
 
@@ -25,12 +27,12 @@ export default {
 
     <div class="top-container">
         <AppSpecialties />
-        <FounderSection />
+        <TeamSection />
     </div>
 
     <EventsSection />
     <CreativeSection />
-
+    <AppNews />
 </template>
 
 <style lang="scss">

@@ -133,7 +133,7 @@ export default {
 
         .event {
             background-color: white;
-            border-bottom: 1px solid $border_events;
+            border-bottom: 1px solid $border_gray;
             display: flex;
             padding: 1.5rem 2rem;
 
@@ -165,7 +165,6 @@ export default {
                     color: $gray_text;
                     font-size: .6rem;
                     i {
-                        color: $main_color;
                         margin-right: .5rem;
                     }
                 }
