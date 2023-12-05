@@ -27,6 +27,8 @@ export default {
     </div>
 
     <EventsSection/>
+    <CreativeSectionVue/>
+
 </template>
 
 <style lang="scss">

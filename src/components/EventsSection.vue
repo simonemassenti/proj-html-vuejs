@@ -1,7 +1,7 @@
 <script>
 export default {
     data() {
-        return{
+        return {
             events: [
                 {
                     date: "Jan 7, 2022",
@@ -36,35 +36,32 @@ export default {
                         active: false
                     }
                 }
-            ],
-            btn: "READ MORE",
+            ]
         }
     },
     methods: {
         getDayFormat(date) {
             let day;
 
-            if(date.length==11){
-                day= "0"+date.charAt(4);
-                return day; 
+            if (date.length == 11) {
+                day = "0" + date.charAt(4);
+                return day;
             } else {
-                day= date.substring(4,6);
+                day = date.substring(4, 6);
                 return day;
             }
         },
-        getMonth(date){
+        getMonth(date) {
             let month;
 
-            month = date.substring(0,3)+', '+date.substring(date.length-5, date.length);
+            month = date.substring(0, 3) + ', ' + date.substring(date.length - 5, date.length);
             return month;
         },
-        openInfo(obj){  
-            if(obj.info.active){
-                obj.info.active=false;
-                this.btn="READ MORE";
-            }else{
-                obj.info.active=true;
-                this.btn="CLOSE";
+        openInfo(obj) {
+            if (obj.info.active) {
+                obj.info.active = false;
+            } else {
+                obj.info.active = true;
             }
         }
     }
@@ -75,10 +72,10 @@ export default {
     <div class="container">
         <div class="events-box">
             <div class="events-title">
-                <h2 class="title">Upcoming Events</h2>
+                <h3 class="title">Upcoming Events</h3>
             </div>
 
-            <div class="event" v-for="(event, i) in events">
+            <div class="event" v-for="event in events">
                 <div class="date">
                     <span class="day">{{ getDayFormat(event.date) }}</span>
                     <small>{{ getMonth(event.date) }}</small>
@@ -97,9 +94,12 @@ export default {
                             {{ event.location }}
                         </small>
                     </div>
-                    <button  @click="openInfo(event)">{{ btn }}</button>
+                    <button @click="openInfo(event)">
+                        <span v-if="event.info.active">CLOSE</span>
+                        <span v-else>READ MORE</span>
+                    </button>
 
-                    <div class="info" :class="event.info.active? 'open': 'closed'">{{ event.info.text }}</div>
+                    <div class="info" v-if="event.info.active">{{ event.info.text }}</div>
                 </div>
             </div>
         </div>
@@ -118,14 +118,15 @@ export default {
     background-size: cover;
 
     .events-box {
-        width: 25%;
+        width: 28%;
         position: relative;
         top: 50%;
-        left: 25%;
+        left: 20%;
         transform: translate(-25%, -50%);
+
         .events-title {
             background-color: white;
-            padding: .8rem;
+            padding: 1rem 2rem;
             box-shadow: 0 5px 10px $border_events;
             position: relative;
         }
@@ -134,10 +135,10 @@ export default {
             background-color: white;
             border-bottom: 1px solid $border_events;
             display: flex;
-            justify-content: center;
-            padding: 1.5rem;
+            padding: 1.5rem 2rem;
+
             .date {
-                width: 3.5rem;
+                width: 3rem;
                 height: 2.5rem;
                 background-color: $main_color;
                 color: white;
@@ -149,28 +150,36 @@ export default {
                     font-weight: bold;
                     font-size: .8rem;
                 }
+
+                small {
+                    display: block;
+                    font-size: .5rem;
+                }
             }
 
             .event-description {
-                margin-left: 1rem;
-
+                max-width: 70%;
+                margin-left: 1.5rem;
                 & small {
                     line-height: 1.5rem;
                     color: $gray_text;
+                    font-size: .6rem;
                     i {
                         color: $main_color;
+                        margin-right: .5rem;
                     }
                 }
 
-                button{
+                button {
                     border: 0;
                     background-color: white;
                     font-weight: bold;
                     font-size: .6rem;
                 }
 
-                .info{
+                .info {
                     font-size: .8rem;
+
                 }
             }
 
@@ -178,19 +187,4 @@ export default {
     }
 
 }
-
-small {
-    display: block;
-    font-size: .6rem;
-}
-
-.open{
-    display:block;
-}
-
-.closed{
-    display: none;
-}
-
-
 </style>
