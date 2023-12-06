@@ -56,13 +56,17 @@ export default{
 .container{
     width: 70%;
     margin: 0 auto;
-    padding-bottom: 5rem;
+    padding-bottom: 2.5rem;
 
     .row{
         display: flex;
         justify-content: space-between;
         position: relative;
         
+        img{
+            width: 70%;
+        }
+
         .client-h{
             display:none;
         }

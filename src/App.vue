@@ -10,6 +10,7 @@ import AppTestimonials from './components/AppTestimonials.vue';
 import AppVideo from './components/AppVideo.vue';
 import ContactUs from './components/ContactUs.vue';
 import AppClients from './components/AppClients.vue';
+import AppFooter from './components/AppFooter.vue';
 
 export default {
     components: {
@@ -23,7 +24,8 @@ export default {
     AppTestimonials,
     AppVideo,
     ContactUs,
-    AppClients
+    AppClients,
+    AppFooter
 }
 }
 
@@ -45,6 +47,7 @@ export default {
     <AppVideo />
     <ContactUs />
     <AppClients />
+    <AppFooter />
 </template>
 
 <style lang="scss">
