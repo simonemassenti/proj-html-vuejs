@@ -61,15 +61,6 @@ export default {
                     font-weight: 100;
                 }
                 
-
-                &.btn-orange{
-                    background-color: $main_color;
-                    color: white;
-                }
-
-                &.btn-white{
-                    background-color: white;
-                }
             }
         }
 

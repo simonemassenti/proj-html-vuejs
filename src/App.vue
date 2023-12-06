@@ -8,6 +8,7 @@ import CreativeSection from './components/CreativeSection.vue';
 import AppNews from './components/AppNews.vue';
 import AppTestimonials from './components/AppTestimonials.vue';
 import AppVideo from './components/AppVideo.vue';
+import ContactUs from './components/ContactUs.vue';
 
 export default {
     components: {
@@ -19,7 +20,8 @@ export default {
     CreativeSection,
     AppNews,
     AppTestimonials,
-    AppVideo
+    AppVideo,
+    ContactUs
 }
 }
 
@@ -39,6 +41,7 @@ export default {
     <AppNews />
     <AppTestimonials />
     <AppVideo />
+    <ContactUs />
 </template>
 
 <style lang="scss">
