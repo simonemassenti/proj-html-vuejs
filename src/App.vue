@@ -9,6 +9,7 @@ import AppNews from './components/AppNews.vue';
 import AppTestimonials from './components/AppTestimonials.vue';
 import AppVideo from './components/AppVideo.vue';
 import ContactUs from './components/ContactUs.vue';
+import AppClients from './components/AppClients.vue';
 
 export default {
     components: {
@@ -21,7 +22,8 @@ export default {
     AppNews,
     AppTestimonials,
     AppVideo,
-    ContactUs
+    ContactUs,
+    AppClients
 }
 }
 
@@ -42,6 +44,7 @@ export default {
     <AppTestimonials />
     <AppVideo />
     <ContactUs />
+    <AppClients />
 </template>
 
 <style lang="scss">
