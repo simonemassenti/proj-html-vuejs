@@ -6,6 +6,7 @@ import EventsSection from './components/EventsSection.vue';
 import TeamSection from './components/TeamSection.vue';
 import CreativeSection from './components/CreativeSection.vue';
 import AppNews from './components/AppNews.vue';
+import AppTestimonials from './components/AppTestimonials.vue';
 
 export default {
     components: {
@@ -15,7 +16,8 @@ export default {
     TeamSection,
     EventsSection,
     CreativeSection,
-    AppNews
+    AppNews,
+    AppTestimonials
 }
 }
 
@@ -33,6 +35,7 @@ export default {
     <EventsSection />
     <CreativeSection />
     <AppNews />
+    <AppTestimonials />
 </template>
 
 <style lang="scss">

@@ -100,7 +100,7 @@ export default {
     .container {
         width: 70%;
         margin: 0 auto;
-        padding: 5rem 0;
+        padding: 4rem 0;
         z-index: 1;
         .top {
             text-align: center;
